@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="MobileOptimized" content="640"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<title>Mobile Infantry: Training Camp</title>
+		<style>
+		  body {
+				font-family: arial;
+				margin: 0;
+				padding: none;
+		  }
+
+			/* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+			#canvas {
+				border: 0px none; 
+				background-color: black;
+				padding-right: 0;
+			}
+
+		  #canvas, #start { 
+				margin-left: auto; 
+				margin-right: auto; 
+				display: block;
+			}
+	
+		</style>
+	</head>
+
+	<body>
+		<canvas class="render" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+
+		<input type="button" id="start" value="Launch" disabled/>
+    <input type="button" id="fullscreen" value="Fullscreen"/>
+
+		<p>(also see a <a href="viewer/">map viewer</a>)</p>
+
+		<script type='text/javascript' src='hl-engine-js/browserfs.min.js'></script>
+		<script type='text/javascript' src='hl-engine-js/lib/hl-engine.js'></script>
+		<script type='text/javascript' src='index.js'></script>
+	</body>
+</html>
