@@ -1,7 +1,9 @@
+import {init, start, fullscreen} from './hl-engine-js/lib/hl-engine.js';
+
 let zipValveArrayBuffer;
 let zipModArrayBuffer;
 
-HLEngine.init({
+init({
   canvas: document.getElementById('canvas'),
   location: 'hl-engine-js/lib'
 });
@@ -25,10 +27,10 @@ async function loadZips() {
 
 loadZips();
 
-document.getElementById('fullscreen').onclick = HLEngine.fullscreen
+document.getElementById('fullscreen').onclick = fullscreen
 
 document.getElementById('start').onclick = function() {
-  HLEngine.start({
+  start({
     zipValve: zipValveArrayBuffer,
     zipMod: zipModArrayBuffer,
     mod: "minfantry",
